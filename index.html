@@ -1,75 +1,767 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Reustonium&#39;s  Stuffz by reustonium</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume of Andy Ruestow</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@charset "utf-8";
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
 
+body{
+  font-family: 'Open Sans', Arial, Tahoma;
+  font-weight: 400;
+  color: #363636;
+  background: #334960;
+}
+blockquote {
+  font-size: 1em;
+}
+
+.container{
+  margin-top: 80px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+#photo-header{
+  margin-top: -75px;
+}
+#photo{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  background: #334960;
+  display: inline-block;
+}
+#photo img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#text-header h1{
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#text-header h1::first-line{
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+}
+#text-header h1 span{
+  color: #334960;
+  opacity: 0.7;
+}
+#text-header h1 sup{
+  opacity: 0.5;
+}
+#text-header:after{
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 15px;
+  content: '';
+  display: block;
+}
+
+.box{
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.box h2{
+  color: #227c74;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#awards,
+#education{
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: relative;
+  padding: 1em 0;
+  list-style: none;
+}
+#awards:before,
+#education:before {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  content: ' ';
+  display: block;
+  background: #32475c;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #32475c 7%, #32475c 89%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#32475c), color-stop(89%,#32475c), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+#awards li,
+#education li{
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  float: left;
+}
+#awards .year,
+#education .year{
+  width: 14%;
+  background: #fff;
+  padding: 10px;
+  font-weight: 700;
+  display: inline-block;
+}
+#awards .description,
+#education .description{
+  width: 83%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#awards .description:after,
+#education .description:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: -16px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #eee;
+  border-width: 8px;
+  pointer-events: none;
+}
+#awards .description h3,
+#education .description h3{
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+#awards .description p,
+#education .description p{
+  margin-top: 5px;
+  padding: 0;
+}
+
+.job{
+  margin-bottom: 15px;
+}
+.job .details {
+  margin-left: 3%;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.job .where{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .year{
+  opacity: 0.7;
+}
+.job .profession{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.job .description{
+  line-height: 1.5em;
+}
+.job .highlights{
+  padding: 5px 0;
+  font-weight: bold;
+}
+.job .job-details {
+  padding-left: 5%;
+  width: 100%;
+}
+.publication {
+  margin-bottom: 0;
+}
+.publication .name{
+  font-size: 1em;
+  font-weight: bold;
+}
+.publication .year{
+    opacity: 0.7;
+}
+.publication p{
+  margin: 0;
+  padding-top: 10px;
+}
+
+.contact-item{
+  width: 100%;
+  float: left;
+}
+.contact-item .icon{
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #32475c;
+  background: #eee;
+}
+.contact-item:last-child .icon{
+  border-bottom: none;
+}
+.contact-item .title{
+  width: 80%;
+  width: calc(100% - 55px);
+  font-weight: 700;
+  opacity: 0.9;
+}
+.contact-item .title.only{
+  margin-top: 10px;
+}
+.contact-item .description{
+  width: 80%;
+  width: calc(100% - 55px);
+  color: #334960;
+}
+
+.item-interests,
+.item-skills{
+  height: 30px;
+  color: #334960;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.interest,
+.skill{
+  color: #fff;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  background: #32475c;
+  position: relative;
+  font-size: .85em;
+}
+.skill-level {
+  background-color: #227c74;
+  border-radius: 4px;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: .75em;
+  position: absolute;
+  margin: 1px 10px;
+}
+
+#language-skills .skill{
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+    </style>
+    <style type="text/css" media="print">
+    body {
+  font-size: .95em;
+  -webkit-print-color-adjust: exact;
+}
+
+a[href]:after {
+  content: none !important;
+}
+
+#photo{
+  display: none;
+}
+
+.box {
+  margin-bottom: -10px;
+}
+
+blockquote,
+#education,
+#awards,
+.contact-item,
+.publication,
+.skills,
+.interests {
+  page-break-inside: avoid;
+}
+
+.col-sm-5{
+  width: 40%;
+  padding: 0 15px;
+}
+
+.col-sm-7{
+  width: 60%;
+  padding: 0 15px;
+}
+
+.skills .col-sm-offset-1,
+.interests .col-sm-offset-1{
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#education {
+  margin: 0;
+  margin-bottom: -20px;
+}
+#awards:before,
+#education:before {
+  background: none;
+}
+
+#awards .description,
+#education .description,
+.job .details {
+  border: 1px solid #eee;
+}
+.publication,
+.publication .panel-heading,
+.publication .name{
+  margin: 0;
+  padding: 0 5px;
+  border: none;
+}
+.publication .panel-body {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.badge {
+  margin: 0;
+}
+
+.list-group-item{
+  border: none;
+  margin: 0;
+  padding: 5px 15px;
+}
+.list-group-item:after{
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #999;
+  border-width: 4px;
+  pointer-events: none;
+ }
+
+    </style>
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/reustonium">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Reustonium&#39;s  Stuffz</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/reustonium">reustonium</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="photo-header" class="text-center">
+            <!-- PHOTO (AVATAR) -->
+            <div id="photo">
+              <img src="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;reustonium&#x2F;resume&#x2F;master&#x2F;andy.png" alt="avatar">
+            </div>
+            <div id="text-header" >
+              <h1>Andy Ruestow<br><span>Senior Software Engineer</span></h1>
+            </div>
+          </div>
         </div>
-
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <!-- ABOUT ME -->
+          <div class="box">
+            <h2><i class="fa fa-user ico"></i> About</h2>
+            <p>I am a problem solver. I enjoy the challenge of approaching a problem, applying past experience, learning new techniques and developing a solution. Inspect, apply, learn, solve is the metronome that keeps me moving. Let's solve problems together. <br><br> I have a non-traditional background for a Software Engineer having pivoted to the world of software from a role in Mechanical Engineering.  My career path highlights one of my greatest strengths, I'm multidimensional. I have a very deep technical background in Engineering, but I also have a keen business sense and love helping clients express their desires and needs.  This skill was first learned while earning my MBA, but sharpened over my 8 years at Impact Technologies working directly with customers on a daily basis.  <br><br> On the technical side I'm just as comfortable talking about build automation or dependency injection as I am discussing thermodynamics of a jet turbine engine.  During my last three years as a software engineer I've primarily worked professionally on .NET web applications and windows applications targeting the Surface Pro.  In my personal time I've been developing several Android apps both of personal use and for the Rochester PBS affiliate WXXI.<br><br>When I'm not behind a keyboard you can find me building a pillow fort with my boys, playing fetch with our pup, or cruising on our sailboat with my wife.  At this stage in my career I'm looking to work with a small, passionate group who values teamwork and relationships as much as producing top-quality work.</p>
+          </div>
+          <!-- WORK EXPERIENCE -->
+          <div class="box">
+            <h2><i class= "fa fa-suitcase ico"></i> Work Experience</h2>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Impact Technologies</div>
+                    <div class="year">March 2014 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior Software Engineer</div>
+                    <div class="description">
+                      I lead software development teams in the creation of analytic analysis and system monitoring software for both military and commercial applications. I also perform the role of developer on several of these projects
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item"><strong>Helotrac</strong> - AngularJS web application that manages Helicopter Fleet Maintenance.  As project maintainer I took the lead in guiding a team of 20 developers through more than 40 sprints over the past two years.  I helped the team adopt modern DevOps practices including Unit Test Automation and Continuous Delivery</li>
+                        <li class="list-group-item"><strong>Software Tooling</strong> - I took the lead in making the business case to adopt modern software tooling including bug tracking, self-hosted repo's, and build servers.  I also administer those tools for the entire company and serve as an advocate for development best practices.</li>
+                        <li class="list-group-item"><strong>ADEM</strong> - .NET web application that parses, stores and processes commercial aircraft engine data.  I implemented and tested all of the advanced analytic algorithms including turbine gas-path normalization, feature trend detection and fault isolation.</li>
+                        <li class="list-group-item"><strong>ASHM</strong> - .NET web application that parses, stores and processes aircraft engine data for A320, A380 and B787 aircraft.  I was responsible for creating an automated daily alert email system that includes graphs of parametric engine data and distilling top level faults for VP level notification.</li>
+                        <li class="list-group-item"><strong>MMT</strong> - .NET Microsoft Surface Pro application that automatically downloads helicopter parametric data over wifi upon landing.  The system then processes the flight data and provides several roll-up levels data including impending faults and maintenance information to on-site aircraft maintainers.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Impact Technologies</div>
+                    <div class="year">July 2011 – March 2014</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Senior Project Engineer</div>
+                    <div class="description">
+                      I led multidisciplinary teams consisting of mechanical, electrical, and computer engineers along with software developers to create advanced diagnostic and prognostic software solutions for both military and commercial applications.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item"><strong>Streamlined Maintenance Action Ranking Tool</strong> - .NET Web application developed to reduce the burden on aircraft maintainers by intelligently capturing troubleshooting information utilizing a reasoning engine to determine root cause of failure.</li>
+                        <li class="list-group-item"><strong>SmartMon Oil Sensor</strong> - Oil quality monitoring device (hardware/firmware) targeting diesel driven Army ground vehicles.  This sensor provides live oil quality measurements using multi-frequency electrochemical impedance spectroscopy.</li>
+                        <li class="list-group-item"><strong>COST-A</strong> - Structural Health Monitoring system for the UH-60M BlackHawk helicopter.</li>
+                        <li class="list-group-item"><strong>IHSMS</strong> - Structural Health Monitoring system for the CH-53k King Stallion, the largest composite rotorcraft.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Impact Technologies</div>
+                    <div class="year">March 2008 – July 2011</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Project Engineer</div>
+                    <div class="description">
+                      I worked as a member of a multidisciplinary team developing advanced diagnostic and prognostic solutions for mostly military applications.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item"><strong>Bradley Fighting Vehicle Transmission Prognostics</strong> - Developed a prognostic solution to estimate the time to failure of several transmission components.</li>
+                        <li class="list-group-item"><strong>Embraer Bleed Valve Seeded Fault Test Stand</strong> - Designed and constructed a seeded fault test stand for the E-175 commercial jet bleed air valve.</li>
+                        <li class="list-group-item"><strong>Torque Sensor Validation</strong> - Designed and constructed a sensor validation test stand for estimating torque loads under dynamic conditions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Delphi Automotive</div>
+                    <div class="year">March 2007 – February 2008</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="job-details col-xs-11">
+                    <div class="profession">Valve Train Test Engineer</div>
+                    <div class="description">
+                      I developed and performed endurance and performance tests within the Valve Train Department. I led the endurance testing project for the dual stage cam phaser which is found on many of today's cars.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item"><strong>Cam Phaser Endurance Test Stand</strong> - Designed and performed endurance and performance tests for DOHC cam phaser prototypes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- AWARDS -->
+          <div class="box">
+            <h2><i class="fa fa-certificate ico"></i> Awards</h2>
+            <ul id="awards" class="clearfix">
+              <li>
+                <div class="year pull-left">September  2001</div>
+                <div class="description pull-right">
+                  <h3>RIT</h3>
+                  <p><i class="fa fa-trophy ico"></i> Dean&#39;s List</p>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">September  2007</div>
+                <div class="description pull-right">
+                  <h3>Mensa</h3>
+                  <p><i class="fa fa-trophy ico"></i> Mensa Membership</p>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">May  2006</div>
+                <div class="description pull-right">
+                  <h3>RIT</h3>
+                  <p><i class="fa fa-trophy ico"></i> Fast Track MBA Scholarship</p>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">March  2013</div>
+                <div class="description pull-right">
+                  <h3>Sikorsky Aircraft</h3>
+                  <p><i class="fa fa-trophy ico"></i> 5-Year Service Award</p>
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- VOLUNTEER -->
+          <div class="box">
+            <h2><i class= "fa fa-group ico"></i> Volunteer</h2>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">WXXI</div>
+                    <div class="address">
+                      <a href="http:&#x2F;&#x2F;hhroc.github.io&#x2F;projects&#x2F;yellr&#x2F;" target= "_blank"><i class="fa fa-globe ico"></i> http:&#x2F;&#x2F;hhroc.github.io&#x2F;projects&#x2F;yellr&#x2F;</a>
+                    </div>
+                    <div class="year">February 2015 – August 2015</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-11 pull-right">
+                    <div class="profession">Android Developer</div>
+                    <div class="description">
+                      Worked on the Android team developing a community journalism app for the Rochester PBS affiliate WXXI.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">Featured on <strong>Need to Know</strong></li>
+                        <li class="list-group-item">Presented at <strong>Libre Planet</strong></li>
+                        <li class="list-group-item">Presented at <strong>Transparancy Camp</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="job clearfix">
+                <div class="row">
+                  <div class="details">
+                    <div class="where">Lizzie Quilters Group</div>
+                    <div class="address">
+                      <a href="https:&#x2F;&#x2F;lizziequilters.com" target= "_blank"><i class="fa fa-globe ico"></i> https:&#x2F;&#x2F;lizziequilters.com</a>
+                    </div>
+                    <div class="year">December 2014 – Present</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-11 pull-right">
+                    <div class="profession">System Administrator</div>
+                    <div class="description">
+                      Support and Administer a lively community for quilting enthusiasts.
+                      <div class="highlights">Highlights</div>
+                      <ul class="list-group">
+                        <li class="list-group-item">100 daily users</li>
+                        <li class="list-group-item">They send me lots of smile emoticons :-D</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <!-- CONTACT -->
+          <div class="box clearfix">
+            <h2><i class="fa fa-bullseye ico"></i> Contact</h2>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-map-marker fa-fw"></span></div>
+              
+              <div class="title only  pull-right">Rochester, NY</div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
+              <div class="title only pull-right"><a href="mailto:andy@ruestow.me" target="_blank">andy@ruestow.me</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-twitter fa-fw"></span></div>
+              <div class="title pull-right">Twitter</div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;twitter.com&#x2F;reustonium" target="_blank">reustonium</a></div>
+            </div>
+          </div>
+          <!-- EDUCATION -->
+          <div class="box">
+            <h2><i class="fa fa-university ico"></i> Education</h2>
+            <ul id="education" class="clearfix">
+              <li>
+                <div class="year pull-left">2001 2006</div>
+                <div class="description pull-right">
+                  <h3>Rochester Institute of Technology</h3>
+                  <p><i class= "fa fa-graduation-cap ico"></i> Bachelor of Science</p>
+                  <p>Mechanical Engineering - Aeronautics</p>
+                </div>
+              </li>
+              <li>
+                <div class="year pull-left">2006 2007</div>
+                <div class="description pull-right">
+                  <h3>Rochester Institute of Technology</h3>
+                  <p><i class= "fa fa-graduation-cap ico"></i> MBA</p>
+                  <p>Masters of Business Administration</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- SKILLS -->
+          <div class="box">
+            <h2><i class="fa fa-tasks ico"></i> Skills</h2>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Tools &amp; DevOps
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">git</span>
+                <span class= "skill badge">Automated Testing</span>
+                <span class= "skill badge">Continuous Integration</span>
+                <span class= "skill badge">Build Automation</span>
+                <span class= "skill badge">Virtualization</span>
+                <span class= "skill badge">Continuous Deployment</span>
+                <span class= "skill badge">Containerization</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Software Development
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Java</span>
+                <span class= "skill badge">Android</span>
+                <span class= "skill badge">Android Testing</span>
+                <span class= "skill badge">.NET</span>
+                <span class= "skill badge">Web Applications</span>
+                <span class= "skill badge">Documentation</span>
+                <span class= "skill badge">Testing</span>
+                <span class= "skill badge">Python</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Project Management
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Scrum</span>
+                <span class= "skill badge">Kanban</span>
+                <span class= "skill badge">Feature Planning</span>
+                <span class= "skill badge">Financials</span>
+                <span class= "skill badge">Reporting</span>
+                <span class= "skill badge">Presentations</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Data Science
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Data Munging</span>
+                <span class= "skill badge">Statistical Analysis</span>
+                <span class= "skill badge">Machine Learning</span>
+                <span class= "skill badge">Big Data Storage</span>
+                <span class= "skill badge">Big Data Processing</span>
+              </div>
+            </div>
+            <div class="skills clearfix">
+              <div class="item-skills">
+                  Mechanical Engineering
+                  
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "skill badge">Matlab</span>
+                <span class= "skill badge">Aerodynamics</span>
+                <span class= "skill badge">CFD</span>
+                <span class= "skill badge">Flight Controls</span>
+              </div>
+            </div>
+          </div>
+          <!-- PUBLICATIONS -->
+          <div class="box">
+            <h2><i class="fa fa-book ico"></i> Publications</h2>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Development and Testing of an Online Oil Condition Monitor for Diesel Driven Army Ground Vehicles</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fa fa-bookmark ico"></i> SAE World Congress</div>
+                <div class="year">16 April  2012</div>
+                <div class="address">
+                  <a href="http:&#x2F;&#x2F;papers.sae.org&#x2F;2012-01-1348&#x2F;" target= "_blank"><i class="fa fa-globe ico"></i> http:&#x2F;&#x2F;papers.sae.org&#x2F;2012-01-1348&#x2F;</a>
+                </div>
+                <p>Describes the development and testing of an online oil condition monitor that utilizes a multi-frequency approach to electrochemical impedance spectroscopy to interrogate and evaluate fluid health in near real time. A dual microcontroller processing architecture embedded in the sensor itself executes an oil-health evaluation algorithm and provides estimates of lubricant remaining useful life, as well as identification of the primary mode of degradation of the fluid.</p>
+              </div>
+            </div>
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">Sensor Validation and Signal Recovery for Helicopter Engine Torque Sensors</div>
+              </div>
+              <div class="panel-body">
+                <div class="publisher"><i class= "fa fa-bookmark ico"></i> American Helicopter Society</div>
+                <div class="year">03 March  2011</div>
+                <div class="address">
+                  <a href="https:&#x2F;&#x2F;vtol.org&#x2F;store&#x2F;product&#x2F;torque-sensor-validation-and-signal-recovery-for-turboshaft-engines-5282.cfm" target= "_blank"><i class="fa fa-globe ico"></i> https:&#x2F;&#x2F;vtol.org&#x2F;store&#x2F;product&#x2F;torque-sensor-validation-and-signal-recovery-for-turboshaft-engines-5282.cfm</a>
+                </div>
+                <p>The development of advanced algorithms designed to validate and synthesizing torque sensor readings for aircraft turboshaft engines.  This solution consists of several modules, preprocessing for the reduction of noise and operational mode detection, diagnostic feature extraction, torque signal recovery, and a fault detection and classification module.</p>
+              </div>
+            </div>
+          </div>
+          <!-- HOBBIES -->
+          <div class="box">
+            <h2><i class="fa fa-heart ico"></i> Interests</h2>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  Sports
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">Rochester Senior Men's Baseball</span>
+                <span class= "interest badge">Brockport Men's League Hockey</span>
+                <span class= "interest badge">Iceplex Men's Hockey League</span>
+                <span class= "interest badge">Brockport Yacht Club Racing</span>
+              </div>
+            </div>
+            <div class="interests clearfix">
+              <div class="item-interests">
+                  Beverages
+              </div>
+              <div class="col-sm-offset-1 col-sm-12 clearfix">
+                <span class= "interest badge">Beer</span>
+                <span class= "interest badge">Espresso</span>
+                <span class= "interest badge">Loose-leaf Tea</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
